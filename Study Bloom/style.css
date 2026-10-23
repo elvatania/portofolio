@@ -1,0 +1,197 @@
+
+/* 1. PALET WARNA */
+:root {
+    --cream: #FAF7F0;
+    --beige: #D8D2C2;
+    --terracotta: #B17457;
+    --charcoal: #4A4947;
+}
+
+/* 2. PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    min-height: 100vh;
+}
+
+/* 3. CONTAINER UTAMA */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* 4. HEADER WEBSITE */
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--terracotta);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 5. KARTU TIMER */
+.timer-card {
+    background-color: white;
+    border: 1px solid var(--beige);
+    border-radius: 20px;
+    padding: 35px 20px;
+    margin-top: 35px;
+    box-shadow: 0 8px 25px rgba(74, 73, 71, 0.08);
+}
+
+h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.timer-description {
+    font-size: 14px;
+    color: #77716A;
+}
+
+/* 6. TOMBOL MODE */
+.mode-buttons {
+    margin-top: 25px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mode-btn {
+    background-color: var(--beige);
+    color: var(--charcoal);
+}
+
+.mode-btn.active {
+    background-color: var(--charcoal);
+    color: white;
+}
+
+/* 7. ANGKA TIMER */
+#timer {
+    font-family: Arial, sans-serif;
+    font-size: 76px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--terracotta);
+    margin: 25px 0 15px;
+}
+
+/* 8. PESAN TIMER */
+#message {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 9. TOMBOL START, PAUSE, RESET */
+#start-btn {
+    background-color: var(--terracotta);
+    color: white;
+}
+
+#pause-btn {
+    background-color: var(--charcoal);
+    color: white;
+}
+
+.reset-btn {
+    background-color: var(--beige);
+    color: var(--charcoal);
+}
+
+/* Efek saat tombol disentuh */
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* 10. FOOTER */
+footer {
+    margin-top: 35px;
+    line-height: 2;
+}
+
+footer p:first-child {
+    color: var(--terracotta);
+    font-size: 15px;
+}
+
+.footer-small {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #77716A;
+}
+
+/* 11. TAMPILAN HP */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    #timer {
+        font-size: 55px;
+    }
+
+    .timer-card {
+        padding: 28px 12px;
+    }
+
+    button {
+        padding: 11px 16px;
+    }
+}
+
+
+
+.description {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--terracotta);
+    margin-bottom: 10px;
+}
+
+.method-description {
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--charcoal);
+}

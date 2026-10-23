@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Indonesia Travel Bucket List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="logo">Explore<span>ID.</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#bucket">My Bucket List</a>
+            <a href="#favorites">Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+                <h1>Discover the Beauty of <span>Indonesia</span></h1>
+                <p class="hero-description">
+                    Temukan tempat indah, simpan destinasi impianmu,
+                    dan mulai rencanakan perjalananmu keliling Indonesia.
+                </p>
+                <a href="#destinations" class="main-button">
+                    Explore Destinations ↗
+                </a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <p class="eyebrow">LET'S EXPLORE</p>
+            <h2>Your Travel Bucket List 🌿</h2>
+            <p>
+                Dari pantai tropis sampai pegunungan yang menakjubkan,
+                Indonesia punya banyak tempat untuk dijelajahi.
+            </p>
+        </section>
+
+        <section class="destinations-section" id="destinations">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FIND YOUR NEXT ESCAPE</p>
+                    <h2>Explore Destinations</h2>
+                </div>
+                <button id="surprise-btn" class="surprise-button">
+                    ✨ Surprise Me!
+                </button>
+            </div>
+
+            <p id="surprise-result" class="surprise-result"></p>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Cari destinasi impianmu..."
+                >
+            </div>
+
+            <div class="categories">
+                <button class="category active" data-category="All">All Places</button>
+                <button class="category" data-category="Beach">🏖️ Beach</button>
+                <button class="category" data-category="Mountain">⛰️ Mountain</button>
+                <button class="category" data-category="Nature">🌿 Nature</button>
+                <button class="category" data-category="Culture">🏛️ Culture</button>
+            </div>
+
+            <div id="destination-list" class="destination-grid"></div>
+        </section>
+
+        <section class="saved-section" id="bucket">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PLACES YOU DREAM OF</p>
+                    <h2>My Bucket List 💚</h2>
+                    <p>Destinasi yang ingin kamu kunjungi.</p>
+                </div>
+            </div>
+
+            <div id="bucket-list" class="destination-grid"></div>
+        </section>
+
+        <section class="saved-section favorites-section" id="favorites">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR MOST LOVED PLACES</p>
+                    <h2>My Favorites ♡</h2>
+                    <p>Simpan tempat favoritmu di sini.</p>
+                </div>
+            </div>
+
+            <div id="favorite-list" class="destination-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">Explore<span>ID.</span></a>
+        <p>Made with ♡ for your next Indonesian adventure.</p>
+        <p class="footer-small">© 2026 My Indonesia Travel Bucket List</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

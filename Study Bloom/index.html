@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Bloom</title>
+
+    <!-- Memanggil file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header website -->
+        <header>
+            <p class="subtitle">YOUR LITTLE STUDY SPACE</p>
+            <h1>Study Bloom ☕</h1>
+            
+<p class="description">
+    Pomodoro Technique
+</p>
+
+<p class="method-description">
+    Metode belajar dengan membagi waktu menjadi 25 menit fokus
+    dan 5 menit istirahat agar belajar lebih teratur.
+</p>
+        </header>
+
+        <!-- Kartu timer -->
+        <main class="timer-card">
+
+            <h2 id="mode-title">Waktu Belajar</h2>
+
+            <p class="timer-description">
+                Fokus pada satu hal, satu waktu.
+            </p>
+
+            <!-- Pilihan mode timer -->
+            <div class="mode-buttons">
+                <button class="mode-btn active"
+                    id="study-btn">
+                    Belajar
+                </button>
+
+                <button class="mode-btn"
+                    id="break-btn">
+                    Istirahat
+                </button>
+            </div>
+
+            <!-- Angka timer -->
+            <div id="timer">25:00</div>
+
+            <p id="message">
+                Kamu pasti bisa menyelesaikannya!
+            </p>
+
+            <!-- Tombol kontrol timer -->
+            <div class="timer-buttons">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+        </main>
+
+        <!-- Kata-kata motivasi -->
+        <footer>
+            <p>✿ take your time, do your best ✿</p>
+            <p class="footer-small">
+                Made with love for your study journey.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Memanggil file JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

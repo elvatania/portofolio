@@ -1,0 +1,335 @@
+
+/* =========================
+   1. WARNA DAN PENGATURAN DASAR
+========================= */
+
+:root {
+    --maroon: #790D16;
+    --cream: #E5D3AF;
+    --ivory: #F5EFE1;
+    --blue: #AEC4D4;
+    --white: #FFFFFF;
+    --text: #49343A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--ivory);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Jangan tampilkan halaman yang sedang disembunyikan */
+.page[hidden] {
+    display: none !important;
+}
+
+
+/* =========================
+   2. SIDEBAR
+========================= */
+
+.sidebar {
+    width: 245px;
+    min-height: 100vh;
+    background: var(--maroon);
+    color: var(--white);
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 23px;
+    margin-bottom: 40px;
+    color: var(--cream);
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(229, 211, 175, 0.2);
+    color: var(--cream);
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   3. BAGIAN UTAMA
+========================= */
+
+.main {
+    margin-left: 245px;
+    padding: 35px 40px;
+    min-height: 100vh;
+}
+
+.page h1 {
+    color: var(--maroon);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.page > p {
+    color: #78676A;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   4. DASHBOARD
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 5px 18px rgba(121, 13, 22, 0.06);
+    border: 1px solid rgba(121, 13, 22, 0.08);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 32px;
+    color: var(--maroon);
+}
+
+.card.blue {
+    background: #E2EAF0;
+}
+
+.card.green {
+    background: var(--cream);
+}
+
+.card.pink {
+    background: #F0DCDD;
+}
+
+
+/* =========================
+   5. HALAMAN TAMBAH TUGAS
+========================= */
+
+#add {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Judul tepat di atas form */
+#add h1 {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    font-size: 38px;
+}
+
+/* Kotak form berada di tengah */
+#taskForm {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(121, 13, 22, 0.07);
+    border: 1px solid rgba(229, 211, 175, 0.7);
+}
+
+/* Label input */
+#taskForm label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 22px;
+    color: var(--maroon);
+    font-weight: 600;
+}
+
+#taskForm label:first-child {
+    margin-top: 0;
+}
+
+/* Kotak pengisian */
+#taskForm input {
+    width: 100%;
+    padding: 16px 18px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text);
+    background: #FFFEFC;
+    border: 1px solid #DED6CC;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.25s;
+}
+
+/* Efek saat kotak diklik */
+#taskForm input:focus {
+    border-color: var(--maroon);
+    box-shadow: 0 0 0 4px rgba(121, 13, 22, 0.08);
+}
+
+#taskForm input::placeholder {
+    color: #A59A94;
+}
+
+/* Tombol tambah tugas */
+#taskForm button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 17px;
+    border: none;
+    border-radius: 12px;
+    background: var(--maroon);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#taskForm button:hover {
+    background: #5D0910;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(121, 13, 22, 0.2);
+}
+
+
+/* =========================
+   6. DAFTAR TUGAS
+========================= */
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+#taskList li {
+    background: var(--white);
+    border-left: 5px solid var(--maroon);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(121, 13, 22, 0.05);
+    cursor: pointer;
+    line-height: 1.7;
+}
+
+#taskList li:hover {
+    background: #FBF7EF;
+}
+
+#taskList li.completed {
+    background: #E2EAF0;
+    opacity: 0.75;
+    text-decoration: line-through;
+    color: #78676A;
+}
+
+
+/* =========================
+   7. TAMPILAN HP
+========================= */
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px;
+        padding: 25px 15px;
+    }
+
+    .main {
+        margin-left: 200px;
+        padding: 30px 22px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #taskForm {
+        padding: 30px;
+    }
+
+    #add h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        margin: 3px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 25px 16px;
+    }
+
+    .page h1 {
+        font-size: 28px;
+    }
+
+    #add h1 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    #taskForm {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    #taskForm label {
+        font-size: 16px;
+    }
+
+    #taskForm input {
+        padding: 14px;
+        font-size: 15px;
+    }
+}

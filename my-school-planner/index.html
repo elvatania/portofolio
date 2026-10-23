@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>My Planner 🌷</h2>
+
+        <a href="#" onclick="showPage('dashboard')">🏠 Dashboard</a>
+        <a href="#" onclick="showPage('tasks')">📝 All Tasks</a>
+        <a href="#" onclick="showPage('add')">➕ Add Task</a>
+    </div>
+
+    <div class="main">
+
+        <section id="dashboard" class="page">
+            <h1>Welcome Back! 💗</h1>
+            <p>Let's organize your school tasks today.</p>
+
+            <div class="cards">
+                <div class="card blue">
+                    <h3>Total Tasks</h3>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+
+                <div class="card green">
+                    <h3>Completed</h3>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+
+                <div class="card pink">
+                    <h3>Not Completed</h3>
+                    <h2 id="pendingTasks">0</h2>
+                </div>
+            </div>
+
+            <h2>My School Planner ✨</h2>
+            <p>Keep learning and finish your tasks!</p>
+        </section>
+
+        <section id="tasks" class="page" hidden>
+            <h1>All Tasks 📝</h1>
+            <p>Klik tugas untuk menandai selesai.</p>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="add" class="page" hidden>
+            <h1>Add New Task 🌸</h1>
+
+            <form id="taskForm">
+                <label>Nama Tugas</label>
+                <input type="text" id="taskName"
+                    placeholder="Contoh: Mengerjakan matematika" required>
+
+                <label>Mata Pelajaran</label>
+                <input type="text" id="subject"
+                    placeholder="Contoh: Matematika" required>
+
+                <label>Deadline</label>
+                <input type="date" id="deadline" required>
+
+                <button type="submit">Tambah Tugas +</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
